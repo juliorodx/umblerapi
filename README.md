@@ -28,6 +28,11 @@ Fique à vontade 😂
 
 ```php
 /**
+ * Include the class
+ */
+require __DIR__ . '/UmblerApi/UmblerApi.php';
+
+/**
  * Start umbler API
  */
 $umblerApi = new UmblerApi\UmblerApi;
@@ -35,9 +40,9 @@ $umblerApi = new UmblerApi\UmblerApi;
 /**
  * Define your credentials and domain
  */
-$umblerApi->debug = true; # true || false
-$umblerApi->setCredentials('userId', 'apiKey'); # check doc
-$umblerApi->setDomain('mydomain.com'); # domain
+$umblerApi->debug = true; # If true, when a error ocurr, the app show err and die
+$umblerApi->setCredentials('userId', 'apiKey'); # check doc or get it on your account dashboard
+$umblerApi->setDomain('mydomain.com'); # domain that exists on Umbler
 ```
 
 Example to get e-mails based on ```$umblerApi->setDomain(mydomain.com)```
